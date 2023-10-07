@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url(Copy\ of\ meadow.png); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    background-repeat: no-repeat;
+    background-size: cover; /* This ensures the image covers the entire background without repeating */
+  }
+  
+  .player {
+    background-color: #e8e673;
+    width: 330px;
+    height: 190px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    box-shadow: 0 8px 0 0 #797342;
+  }
+
+
+  .record {
+    height: 175px;
+    width: 175px;
+    background-color: #181312;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .record:before,
+  .record:after {
+    position: absolute;
+    content: "";
+    border: 5px solid transparent;
+    border-top-color: #2c2424;
+    border-bottom-color: #2c2424;
+    border-radius: 50%;
+  }
+
+  .record:before {
+    height: 135px;
+    width: 135px;
+  }
+
+  .record:after {
+    height: 95px;
+    width: 95px;
+  }
+
+  .label {
+    background-color: #181312;
+    height: 15px;
+    width: 15px;
+    border: 20px solid #d79a0d;
+    border-radius: 50%;
+  }
+  
+  .tone-arm {
+    height: 90px;
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 25px;
+    right: 95px;
+    transition: 1s;
+    transform-origin: top;
+  }
+
+  .control {
+    background-color: #181312;
+    height: 17px;
+    width: 17px;
+    border: 10px solid #2c2c2c;
+    border-radius: 50%;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+  }
+
+  .tone-arm:before {
+    content: "";
+    height: 40px;
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: rotate(30deg);
+    bottom: -36px;
+    right: 10px;
+  }
+
+  .tone-arm:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 10px;
+    border-top: 18px solid #b2aea6;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    top: 108px;
+    right: 12.5px;
+    transform: rotate(30deg);
+  }
+
+  .btn {
+  height: 28px;
+  width: 28px;
+  background-color: #fefc96;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  border: 3.5px solid #d79a0d;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.1); 
+  background-color: #fff563;
+}
+
+.btn:active {
+  transform: scale(0.9); 
+}
+
+
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    transform: rotate(-90deg);
+    width: 90px;
+    height: 7px;
+    position: absolute;
+    left: 233px;
+    top: 60px;
+    background-color: #d79a0d;
+    outline: none;
+    border-radius: 3px;
+    border: 6px solid #fefc96;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 12px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .play {
+    transform: rotate(30deg);
+    transform-origin: top;
+    transition: 1s;
+  }
+
+  .on {
+    animation: spin 3s 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .header {
+    font-weight:600;
+    font-size: 40px;
+    position: absolute;
+    text-shadow: -15px 5px 20px #d6bdd3;
+    left: 50%;
+    bottom: 60%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: verdana;
+    color: #f9f69d;
+    text-shadow: 1px 1px 1px #8f8a66,
+        1px 2px 1px #8f8a66,
+        1px 3px 1px #8f8a66,
+        1px 4px 1px #8f8a66,
+        1px 5px 1px #8f8a66,
+        1px 6px 1px #8f8a66,
+        1px 7px 1px #8f8a66,
+        1px 8px 1px #8f8a66,
+        1px 9px 1px #8f8a66,
+        1px 10px 1px #8f8a66,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+  }
+
+  .footer {
+    font-weight:600;
+    font-size: 70px;
+    position: absolute;
+    text-shadow: -15px 5px 20px #d6bdd3;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: verdana;
+    color: #edb5e7;
+    color: #f9f69d;
+    text-shadow: 1px 1px 1px #8f8a66,
+        1px 2px 1px #8f8a66,
+        1px 3px 1px #8f8a66,
+        1px 4px 1px #8f8a66,
+        1px 5px 1px #8f8a66,
+        1px 6px 1px #8f8a66,
+        1px 7px 1px #8f8a66,
+        1px 8px 1px #8f8a66,
+        1px 9px 1px #8f8a66,
+        1px 10px 1px #8f8a66,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+  }
+
+  
